@@ -30,8 +30,6 @@ class User(models.Model):
         return self.username
 
     def clean(self):
-        if not self.username.isalnum():
-            raise ValidationError('Username should only contain alphanumeric characters')
         if len(self.password) < 6:
             raise ValidationError('Password should be at least 6 characters long')
 

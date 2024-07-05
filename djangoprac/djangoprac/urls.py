@@ -24,4 +24,5 @@ urlpatterns = [
     path('',views.home, name="home"),
     path('htmlpage/',views.htmlpage, name="htmlpage"),
     path('appindj/',include("appindj.urls")),
+    path('paytm/',include("Paytm.urls")),
 ]
