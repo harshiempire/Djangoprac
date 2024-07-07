@@ -24,5 +24,7 @@ urlpatterns = [
     path('',views.home, name="home"),
     path('htmlpage/',views.htmlpage, name="htmlpage"),
     path('appindj/',include("appindj.urls")),
-    path('paytm/',include("Paytm.urls")),
+    path('api/v1/',include("Paytm.urls")),
+    path('api-auth/', include('rest_framework.urls')),
+
 ]
